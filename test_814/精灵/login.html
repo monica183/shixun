@@ -1,0 +1,104 @@
+<html>
+<head>
+	<title>登录</title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<style type="text/css">
+	body{
+		background-image: url(Login/bg.jpg) ;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+
+	}
+	#login{
+		width: 350px;
+		height: 500px;
+		margin: 0 auto;
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translate(-50%,50%);
+	}
+	#input{
+		width: 150px;
+		height: 50px;
+		margin: 0 auto;
+	}
+	.ins{
+		color: white;
+		border: none;
+		border-bottom: 1px solid black;
+		background-color: unset;
+		outline: none;
+		position: relative;
+	}
+	input::-webkit-input-placeholder{
+	    color:#fff;
+	    font-size: 15px;
+	}
+	#l1,#l2{
+		width: 140px;
+		float: left;
+		position: absolute;
+		left: 40px;
+		top: 80px;
+	}
+	#l2{
+		left: 180px;
+	}
+</style>
+<body>
+	<div id="login">
+		<div id="input">
+			<input type="text" name="login" placeholder="账号" class="ins" id="account"><br><br>
+			<input type="password" name="login" placeholder="密码" class="ins" id="psw">
+		</div>
+		<div>
+			<img src="Login/btn_login_n.png" id="l1" onmouseover="hover1()" onmouseout="hover2()">
+			<img src="Login/btn_logout_n.png" id="l2" onmouseover="hover12()" onmouseout="hover22()">
+		</div>
+	</div>
+	<script type="text/javascript">
+		let img1 = document.getElementById('l1');
+		let img2 = document.getElementById('l2');
+		function hover1() {
+			img1.src = 'Login/btn_login_p.png';
+		}
+		function hover2() {
+			img1.src = 'Login/btn_login_n.png';
+		}
+		function hover12() {
+			img2.src = 'Login/btn_logout_p.png';
+		}
+		function hover22() {
+			img2.src = 'Login/btn_logout_n.png';
+		}
+		img1.onclick = function(){
+			var account = $('#account').val();
+			var psw = $('#psw').val();
+			console.log(account,psw)
+			if (account === "user" && psw === "123456") {
+				alert("登陆成功！");
+				window.location.href = "home.html";
+			}else if (account.length === 0 && psw.length === 0) {
+				alert("请输入账号密码！")
+			}else{
+				alert("登陆失败");
+			}
+		}
+		$("#account").focus(function(){
+			$("#account").css("border-bottom","2px solid #f42d75");
+		})
+		$("#psw").focus(function(){
+			$("#psw").css("border-bottom","2px solid #f42d75");
+		})
+		$("#account").blur(function(){
+			$("#account").css("border-bottom","1px solid #000");
+		})
+		$("#psw").blur(function(){
+			$("#psw").css("border-bottom","1px solid #000");
+		})
+	</script>
+</body>
+</html>

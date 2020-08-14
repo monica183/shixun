@@ -1,0 +1,1174 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" type="text/css" href="home.css"> -->
+	<!-- <script type="text/javascript" src="home.js"></script> -->
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			background-image: url("textures/background.jpg");
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+		}
+		#container{
+			width: 360px;
+			height: 700px;
+			
+			margin: 0 auto;
+			position: relative;
+		}
+		#sub{
+			width: 370px;
+			position: absolute;
+			left: -5px;
+			bottom: 50px;
+		}
+
+		#main{
+			width: 370px;
+			position: absolute;
+			bottom: -37px;
+		}
+		.position{
+			position: absolute;
+		}
+		#slot,#fold{
+			bottom: 110px;
+			z-index: 1;
+			left: 130px;
+		}
+		#slot{
+			width: 100px;
+		}
+		#fold{
+			width: 80px;
+			left: 140px;
+		}
+		#backpack,#honor,#comment,#task,#fight,#hecheng{
+			width: 50px;
+			z-index: 1;
+			bottom: 67px;
+			left: 30px;
+		}
+		#honor{
+			left: 80px;
+		}
+		#comment{
+			left: 135px;
+		}
+		#task{
+			left: 190px;
+
+		}
+		#fight{
+			left: 240px;
+		}
+		#hecheng{
+			width: 40px;
+			left: 290px;
+		}
+		#t_backpack,#t_rongyu,#t_comment,#t_task,#t_fight,#t_hc{
+			width: 30px;
+			position: absolute;
+			bottom: 62px;
+			z-index: 11;
+			left: 37px;
+		}
+		#t_rongyu{
+			left: 90px;
+		}
+		#t_comment{
+			left: 145px;
+		}
+		#t_task{
+			left: 192px;
+		}
+		#t_fight{
+			left: 250px;
+		}
+		#t_hc{
+			left: 293px;
+		}
+		#home,#level,#raid,#shop,#friends,#setting{
+			width: 50px;
+			position: absolute;
+			bottom: -18px;
+			z-index: 111;
+			left: 20px;
+		}
+		#level{
+			left: 70px;
+		}
+		#raid{
+			left: 130px;
+		}
+		#shop{
+			left: 190px;
+		}
+		#friends{
+			left: 250px;
+		}
+		#setting{
+			left: 305px;
+		}
+		#status,#status2,#status3{
+			position: absolute;
+			z-index: 11;
+			width: 30%;
+
+		}
+		#status2{
+			left: 33.1%;
+			
+		}
+		#status3{
+			left: 66.2%;
+			
+		}
+		#rank,#diamond,#gold{
+			width: 40px;
+			position: absolute;
+			z-index: 111;
+			left: -2px;
+		}
+		#diamond{
+			left: 30%;
+		}
+		#gold{
+			left: 63%;
+		}
+		.span{
+			position: absolute;
+			z-index: 1111;
+			color: #f3f676;
+			top: 13px;
+		}
+		#t_rank{
+			color: white;
+			left: 12px;
+			top: 17px;
+			font-size: 12px;
+		}
+		#t_rank2{
+			left: 10%;
+			top: 18px;
+			font-size: 12px;
+		}
+		#t_diamond{
+			left: 40%;
+		}
+		#t_gold{
+			left: 75%;
+
+		}
+		#timer,#timer2{
+			width: 45%;
+			position: absolute;
+			top: 50px;
+		}
+		#timer2{
+			left: 50%;
+		}
+		#i_fight,#i_energy{
+			position: absolute;
+			width: 40px;
+			z-index: 111;
+			top: 45px;
+		}
+		#i_energy{
+			left: 50%;
+		}
+		#timer_slot,#timer_slot2,#timer_bar2,#timer_bar{
+			position: absolute;
+			z-index: 1111;
+			top: 70px;
+			left: 40px;
+		}
+		#timer_slot,#timer_slot2{
+			width: 120px;
+		}
+		#timer_slot2,#timer_bar{
+			left: 61%;
+		}
+		#timer_bar2,#timer_bar{
+			width: 50px;
+			z-index: 111111;
+		}
+		#timer_bar2{
+			width: 70px;
+		}
+		#top{
+			margin-top: 10px;
+		}
+		#sy_time,#bar{
+			position: absolute;
+			top: 53px;
+			left: 40px;
+			z-index: 11111;
+			font-size: 12px;
+			color: #f3f676;
+		}
+		#bar{
+			left: 120px;
+			color: #76e0e9;
+		}
+		#sy_time2,#bar2{
+			position: absolute;
+			top: 53px;
+			left: 60%;
+			z-index: 11111;
+			font-size: 12px;
+			color: #f3f676;
+		}
+		#bar2{
+			left: 83%;
+			color: #76e0e9;
+		}
+		#msg{
+			position: absolute;
+			width: 60px;
+			top:90px;
+			z-index: 88888;
+		}
+		#b_top{
+			display: block;
+		}
+		/*#t_top{
+			margin-top: -60px;
+		}
+		#bottom{
+			margin-top: 70px;
+		}*/
+		#bot,#banner,#expand,#expand2{
+			position: absolute;
+			z-index: 111;
+			bottom: 50px;
+		}
+		#bot{
+			width: 360px;
+		}
+		#banner{
+			width: 315px;
+			left: 20px;
+			bottom: 75px;
+		}
+		#expand{
+			width: 80px;
+			z-index: 1111;
+			left: 39%;
+			bottom:60px;
+		}
+		#expand2{
+			width: 100px;
+			left: 36%
+		}
+		#fig{
+			position: absolute;
+			left: -10px;
+			bottom: 168px;
+			width: 250px;
+			z-index: 22222;
+		}
+		#s_bg,#purple,#purple2,#purple3,#purple4,#purple5{
+			position: absolute;
+			z-index: 11111;
+			top: 65px;
+			right: 0px;
+			width: 200px
+
+		}
+		#purple{
+			top:130px;
+			width: 150px;
+			right: 20px;
+		}
+		#purple2{
+			top:180px;
+			width: 150px;
+			right: 20px;
+		}
+		#purple3{
+			top:230px;
+			width: 150px;
+			right: 20px;
+		}
+		#purple4{
+			top:280px;
+			width: 150px;
+			right: 20px;
+		}
+		#purple5{
+			top:330px;
+			width: 150px;
+			right: 20px;
+		}
+		#chain,#chain2{
+			position: absolute;
+			z-index: 11111;
+			width: 20px;
+			top: 90px;
+			right: 40px;
+		}
+		#chain{
+			right: 130px;
+		}
+		#cz,#gm,#kc,#tili,#jl{
+			position: absolute;
+			width: 100px;
+			top: 130px;
+			right: 40px;
+			z-index: 22222;
+		}
+		#cz,#gm{
+			width: 90px;
+			right: 48px;
+		}
+		#gm{
+			top: 183px;
+		}
+		#kc{
+			top: 235px;
+		}
+		#tili{
+			top: 285px;
+		}
+		#jl{
+			top: 333px;
+		}
+		#b_left,#b_right,#card{
+			display: none;
+		}
+		#d_cz{
+			display: none;
+		}
+		#bg_wood,#frame{
+			position: absolute;
+			width: 350px;
+			z-index: 555555;
+		}
+		#frame{
+			bottom: 110px;
+		}
+		#bg_wood{
+			top: 230px;
+			height: 350px;
+			overflow: hidden;
+
+		}
+		#bg_red_pannel{
+			position: absolute;
+		    width: 330px;
+		    height: 340px;
+		    top: 240px;
+		    z-index: 444444;
+		    right: 20px;
+		}
+		#wood{
+			width: 350px;
+			height: 350px;
+			overflow: hidden;
+
+		}
+		#t_cz,#bg_cz{
+			position: absolute;
+			z-index: 5555556;
+			width: 180px;
+			top: 200px;
+			left: 90px;
+
+		}
+		#t_cz{
+			width: 110px;
+			left: 125px;
+		}
+		#caozuo{
+			position: relative;
+			z-index: 6666666;
+			top: -100px;
+		}
+		#red,#blue,#duihuan,#sm_chongzhi{
+			position: absolute;
+			width: 80px;
+			left: 30px;
+		}
+		#blue{
+			left: 120px;
+		}
+		#duihuan,#sm_chongzhi{
+			width: 50px;
+			z-index: 66666667;
+			top: 5px;
+			left: 45px;
+		}
+		#duihuan{
+			left: 135px;
+		}
+		#vip{
+			position: relative;
+			z-index: 666667;
+
+		}
+		#bg_red{
+			position: absolute;
+			top: -65px;
+			left: 20px;
+			width: 310px;
+		}
+		#t_vip,#btn_purple2,#i_ticket,#v_span,#be_vip{
+			position: absolute;
+			z-index: 666668;
+			top: -60px;
+			left: 30px;
+			width: 50px;
+		}
+		#vip{
+			width: 30px;
+		}
+		#btn_purple2{
+			width: 70px;
+			left: 100px;
+		}
+		#i_ticket,#v_span{
+			width: 40px;
+			left: 200px;
+		}
+		#v_span{
+			left: 245px;
+			font-size: 15px;
+		}
+		#be_vip{
+			z-index: 666669;
+			left: 110px;
+			top: -55px;
+		}
+		#gift{
+			position: relative;
+			z-index: 666669;
+		}
+		#g_ul li{
+			list-style: none;
+		}
+		.paper{
+			position: absolute;
+			top: -30px;
+			width: 300px;
+			height: 85px;
+			left: 25px;
+		}
+		#paper2{
+			top: 55px;
+		}
+		#paper3{
+			top: 140px;
+		}
+		.c_d{
+			position: relative;
+			z-index: 766670;
+
+		}
+		#item1,.c_span,.g_banner{
+			position: absolute;
+			top: -25px;
+			width: 100px;
+			left: 40px;
+		}
+		.c_span{
+			left: 60px;
+			top: -28px;
+			color: #fff;
+		}
+		.r_banner,.t_libao,.span_libao{
+			width: 80px;
+			position: absolute;
+			top: -20px;
+			left: 150px;
+		}
+		.r_banner{
+			width: 120px;
+		}
+		.span_libao{
+			width: 140px;
+		    top: 0px;
+		    font-size: 12px;
+		    color: #6e221b;
+		}
+		.r_btn,.btn_span{
+			width: 80px;
+			position: absolute;
+			left: 230px;
+			top: 15px;
+		}
+		.btn_span{
+			left: 255px;
+			top: 19px;
+			color: #fee98c;
+		}
+		#c_d2{
+			top: 90px;
+		}
+		#c_d3{
+			top: 170px;
+		}
+		#close{
+			width:60px; 
+			position: absolute;
+			top: 215px;
+			right: -8px;
+			z-index: 766670;
+		}
+		#d_bag{
+			display: none;
+		}
+		.title_backpack{
+			width: 70px;
+		}
+		#b_cz{
+			position: relative;
+			z-index: 777777;
+		}
+		.btn_up_blue{
+			position: absolute;
+			width: 60px;
+			top: -90px;
+			left: 20px;
+		}
+		#btn_up_blue2{
+			position: absolute;
+			left: 265px;
+		}
+		#btns_hero{
+			width: 120px;
+		    position: absolute;
+		    top: -95px;
+		    left: 120px;
+		}
+		#craft{
+			position: absolute;
+			width: 60px;
+			top: -90px;
+			left: 20px;
+			z-index: 7;
+		}
+		#atk{
+			position: absolute;
+			width: 50px;
+			top: -90px;
+			left: 271px;
+			z-index: 7;
+
+		}
+		.btn{
+			position: relative;
+			z-index: 7888888;
+			bottom: -180px;
+		}
+		.btn_b,.sell{
+			position: absolute;
+			width: 100px;
+			left: 25px;
+		}
+		.sell{
+			width:50px;
+			left: 48px;
+		    bottom: -34px;
+		}
+		#btn2{
+			left: 100px;
+		}
+		#btn3{
+			left: 200px;
+		}
+		#h_ul li{
+			list-style: none;
+			/*float: left;*/
+		}
+		#hero{
+			
+		}
+		.h_hero{
+			position: relative;
+			z-index: 888888;
+			position: relative;
+			top: -50px;
+			left: 30px;
+		}
+		.rare{
+			width: 50px;
+			height: 70px;
+		}
+		.queen{
+			position: absolute;
+			width: 80px;
+			top: -10px;
+		    left: -15px
+		}
+		.earth{
+			width: 15px;
+		    position: absolute;
+		    left: 42px;
+		}
+		.h_b{
+			width: 15px;
+		    position: absolute;
+		    left: -5px;
+		    top: 55px;
+		}
+		.star,.star2,.star3,.star4,.star5{
+			width: 10px;
+			position: absolute;
+		    top: 55px;
+			left: 8px;
+		}
+		.star2{
+			left: 15px;
+		}
+		.star3{
+			left: 21px;
+		}
+		.star4{
+			left: 28px;
+		}
+		.star5{
+			left: 35px;
+		}
+		#hero{
+			position: relative;
+		}
+		#h_hero2{
+			position: absolute;
+			left: 90px;
+		}
+		#h_hero3{
+			position: absolute;
+			left: 150px;
+		}
+		#h_hero4{
+			position: absolute;
+			left: 210px;
+		}
+		#h_hero5{
+			position: absolute;
+			left: 270px;
+		}
+		#li2{
+			position: absolute;
+			top: 70px;
+		}
+		#li3{
+			position: absolute;
+			top: 140px;
+		}
+		#li4{
+			position: absolute;
+			top: 190px;
+		}
+		.b_bot{
+			position: relative;
+			top: -70px;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div id="container"> -->
+		<div id="top">
+			<div id="t_top">
+				<img src="textures/icon_rank.png" id="rank">
+				<span class="span" id="t_rank">99</span>
+				<span class="span" id="t_rank2">卢克断手者</span>
+				<img src="textures/bg_status.png"  id="status">
+				<img src="textures/icon_diamond.png" id="diamond">
+				<span class="span" id="t_diamond">6688999</span>
+				<img src="textures/bg_status.png"  id="status2">
+				<img src="textures/icon_gold.png" id="gold">
+				<span class="span" id="t_gold">999999</span>
+				<img src="textures/bg_status.png"  id="status3">
+			</div>
+			<div id="t_middle">
+				<img src="textures/icon_fight.png" id="i_fight">
+				<span id="sy_time">剩余时间<span id="time">0:08</span></span>
+				<span id="bar">57/120</span>
+				<img src="textures/timer_slot.png" id="timer_slot">
+				<img src="textures/timer_bar.png" id="timer_bar">
+				<img src="textures/bg_timer.png" id="timer">
+				<span id="sy_time2">剩余时间<span id="time2">1:23</span></span>
+				<span id="bar2">12/80</span>
+				<img src="textures/icon_energy.png" id="i_energy">
+				<img src="textures/timer_slot.png" id="timer_slot2">
+				<img src="textures/timer_bar.png" id="timer_bar2">
+				<img src="textures/bg_timer.png" id="timer2">
+			</div>
+			<img src="textures/btn_message.png" id="msg" onclick="pop()">
+		</div>
+		<div id="container">
+			<div id="bottom">
+				<div id="b_left">
+					<img src="textures/shop/shop_figure.png" id="fig">
+				</div>
+				<div id="b_right">
+					<img src="textures/shop/shop_title_bg.png" id="s_bg">
+					<img src="textures/shop/text_chongzhi.png" id="cz" onclick="cz()">
+					<img src="textures/shop/text_goumai.png" id="gm">
+					<img src="textures/shop/text_kuochong.png" id="kc" onclick="bag()">
+					<img src="textures/shop/text_buchongtili.png" id="tili">
+					<img src="textures/shop/text_buchongjingli.png" id="jl">
+					
+
+					<img src="textures/shop/btn_purple.png" id="purple" onclick="cz()">
+					<img src="textures/shop/btn_purple.png" id="purple2">
+					<img src="textures/shop/btn_purple.png" id="purple3">
+					<img src="textures/shop/btn_purple.png" id="purple4">
+					<img src="textures/shop/btn_purple.png" id="purple5">
+					<img src="textures/shop/shop_chain.png" id="chain">
+					<img src="textures/shop/shop_chain.png" id="chain2">
+
+				</div>
+				<div id="d_cz">
+					<img src="textures/heroslot/title_bg.png" id="bg_cz">
+					<img src="textures/shop/text_title_chongzhi.png" id="t_cz">
+					<img src="textures/heroslot/btn_close.png" id="close" onclick="close1()">
+					<div id="wood">
+						<img src="textures/heroslot/bg_panel_wood.png" id="bg_wood">
+					</div>
+					<div id="caozuo">
+						<img src="textures/shop/text_sm_chongzhi.png" id="sm_chongzhi">
+						<img src="textures/shop/btn_sm_red.png" id="red">
+						<img src="textures/shop/text_duihuan.png" id="duihuan">
+						<img src="textures/shop/btn_sm_blue.png" id="blue">
+					</div>
+					<div id="vip">
+						<img src="textures/shop/banner_red_long.png" id="bg_red">
+						<div id="">
+							<img src="textures/shop/title_vip.png" id="t_vip">
+							<img src="textures/shop/btn_purple2.png" id="btn_purple2">
+							<img src="textures/shop/text_be_vip.png" id="be_vip">
+							<img src="textures/shop/icon_ticket.png" id="i_ticket">
+							<span id="v_span">1200</span>
+						</div>
+					</div>
+					<div id="gift">
+						<ul id="g_ul">
+							<li>
+								<div>
+									<img src="textures/heroslot/bg_panel_paper.png" class="paper">
+									<div class="c_d">
+										<img src="textures/shop/item1.png" id="item1">
+										<img src="textures/shop/banner_green.png" class="g_banner">
+										<span class="c_span">优惠60%</span>
+										<img src="textures/shop/banner_gradient.png" class="r_banner">
+										<img src="textures/shop/text_subscribe.png" class="t_libao">
+										<span class="span_libao">包含一张月卡，3颗钻石。</span>
+										<img src="textures/shop/btn_red.png" class="r_btn">
+										<span class="btn_span">$68</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<img src="textures/heroslot/bg_panel_paper.png" class="paper" id="paper2">
+									<div class="c_d" id="c_d2">
+										<img src="textures/shop/item2.png" id="item1">
+										<img src="textures/shop/banner_green.png" class="g_banner">
+										<span class="c_span">优惠60%</span>
+										<img src="textures/shop/banner_gradient.png" class="r_banner">
+										<img src="textures/shop/text_subscribe.png" class="t_libao">
+										<span class="span_libao">包含一张月卡，3颗钻石。</span>
+										<img src="textures/shop/btn_red.png" class="r_btn">
+										<span class="btn_span">$68</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div>
+									<img src="textures/heroslot/bg_panel_paper.png" class="paper" id="paper3">
+									<div class="c_d" id="c_d3">
+										<img src="textures/shop/item3.png" id="item1">
+										<img src="textures/shop/banner_green.png" class="g_banner">
+										<span class="c_span">优惠60%</span>
+										<img src="textures/shop/banner_gradient.png" class="r_banner">
+										<img src="textures/shop/text_subscribe.png" class="t_libao">
+										<span class="span_libao">包含一张月卡，3颗钻石。</span>
+										<img src="textures/shop/btn_red.png" class="r_btn">
+										<span class="btn_span">$68</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<img src="textures/heroslot/bg_frame.png" id="frame">
+
+				</div>
+				<div id="d_bag">
+					<img src="textures/heroslot/title_bg.png" id="bg_cz" >
+					<img src="textures/heroslot/title_backpack.png" id="t_cz" class="title_backpack" style="width: 75px;left: 145px;top: 205px">
+					<img src="textures/heroslot/btn_close.png" id="close" onclick="close2()" class="clos2">
+					<div id="wood" >
+						<img src="textures/heroslot/bg_panel_red.png" id="bg_red_pannel">
+					</div>
+					<div id="b_cz">
+						<img src="textures/heroslot/title_craft.png" id="craft">
+						<img src="textures/heroslot/btn_up_blue.png" id="btn_up_blue" class="btn_up_blue">
+						<img src="textures/heroslot/btns_hero.png" id="btns_hero">
+						<img src="textures/heroslot/title_atk.png" id="atk">
+						<img src="textures/heroslot/btn_up_blue.png" id="btn_up_blue2" class="btn_up_blue">
+					</div>
+					<div id="hero">
+						<ul id="h_ul">
+							<li>
+								<div class="h_hero">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+								</div>
+								<div class="h_hero" id="h_hero2">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/init/ic_sundine.png" class="queen">
+									<img src="textures/heroslot/att_water.png" class="earth">
+									<img src="textures/heroslot/s_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero3">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/init/ic_shilf.png" class="queen">
+									<img src="textures/heroslot/att_water.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+								</div>
+								<div class="h_hero" id="h_hero4">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_drakan.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero5">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								
+							</li>
+							<li id="li2">
+								<div class="h_hero">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/init/ic_sundine.png" class="queen">
+									<img src="textures/heroslot/att_water.png" class="earth">
+									<img src="textures/heroslot/s_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+								</div>
+								<div class="h_hero" id="h_hero2">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero3">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero4">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero5">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+							</li>
+							<li id="li3">
+								<div class="h_hero">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+								</div>
+								<div class="h_hero" id="h_hero2">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero3">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero4">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero5">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+							</li>
+							<!-- <li id="li4">
+								<div class="h_hero">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+								</div>
+								<div class="h_hero" id="h_hero2">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero3">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero4">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+								<div class="h_hero" id="h_hero5">
+									<img src="textures/heroslot/rare1.png" class="rare">
+									<img src="textures/portrait/atlantis/hero/ic_mermaidqueen.png" class="queen">
+									<img src="textures/heroslot/att_earth.png" class="earth">
+									<img src="textures/heroslot/b_highlight.png" class="h_b">
+									<img src="textures/heroslot/star_small.png" class="star">
+									<img src="textures/heroslot/star_small.png" class="star2">
+									<img src="textures/heroslot/star_small.png" class="star3">
+									<img src="textures/heroslot/star_small.png" class="star4">
+									<img src="textures/heroslot/star_small.png" class="star5">
+
+								</div>
+							</li> -->
+						</ul>
+					</div>
+					<div class="b_bot">
+						<div class="btn">
+							<img src="textures/heroslot/btn_blue.png" class="btn_b">
+							<img src="textures/heroslot/text_sell.png" class="sell">
+						</div>
+						<div class="btn" id="btn2">
+							<img src="textures/heroslot/btn_blue.png" class="btn_b">
+							<img src="textures/heroslot/text_upgrade.png" class="sell">
+						</div>
+						<div class="btn" id="btn3">
+							<img src="textures/heroslot/btn_blue.png" class="btn_b">
+							<img src="textures/heroslot/text_evolve.png" class="sell">
+						</div>
+					</div>
+					<img src="textures/heroslot/bg_frame.png" id="frame">
+
+				</div>
+				<div id="card">
+					<img src="textures/shop/bot_frame.png" id="bot">
+					<img src="textures/shop/banner_subscribe.png" id="banner">
+					<img src="textures/btn_expand.png" id="expand">
+					<img src="textures/btn_expand_slot.png" id="expand2">
+				</div>
+				<div id="b_top">
+					<img src="textures/btn_expand_slot.png" class="position" id="slot">
+					<img src="textures/btn_fold.png" class="position" id="fold">
+					<img src="textures/home_btns/btn_backpack.png" class="position" id="backpack" >
+					<img src="textures/txt_beibao.png" id="t_backpack">
+					<img src="textures/home_btns/btn_rongyu.png" class="position" id="honor">
+					<img src="textures/txt_rongyu.png" id="t_rongyu">
+					<img src="textures/home_btns/btn_liuyan.png" class="position" id="comment">
+					<img src="textures/txt_liuyan.png" id="t_comment">
+					<img src="textures/home_btns/btn_renwu.png" class="position" id="task">
+					<img src="textures/txt_renwu.png" id="t_task">
+					<img src="textures/home_btns/btn_chuzhan.png" class="position" id="fight">
+					<img src="textures/txt_chuzhan.png" id="t_fight">
+					<img src="textures/home_btns/btn_hecheng.png" class="position" id="hecheng">
+					<img src="textures/txt_hecheng.png" id="t_hc">
+					<img src="textures/bg_sub_btns.png" id="sub">
+				</div>
+				<div id="b-bottom">
+					<img src="textures/bg_main_btns.png" id="main">
+					<img src="textures/home_btns/btn_home.png" id="home"> 
+					<img src="textures/home_btns/btn_level.png" id="level">
+					<img src="textures/home_btns/btn_raid.png" id="raid">
+					<img src="textures/home_btns/btn_shop.png" id="shop">
+					<img src="textures/home_btns/btn_friends.png" id="friends">
+					<img src="textures/home_btns/btn_setting.png" id="setting">
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
+	<script type="text/javascript">
+		function pop() {
+			var b_top = document.getElementById('b_top');
+			var body = document.getElementsByTagName('body')[0];
+			var b_left = document.getElementById("b_left");
+			var b_right = document.getElementById("b_right");
+			var card = document.getElementById("card");
+			if (b_top.style.display == "none") {
+				b_top.style.display = "block";
+				body.style.backgroundImage = "url(textures/background.jpg)";
+				b_left.style.display = "none";
+				b_right.style.display = "none";
+				card.style.display = "none";
+
+			}else{
+				b_top.style.display = "none";
+				body.style.backgroundImage = "url(textures/shop/bg_shop.png)";
+				b_left.style.display = "block";
+				b_right.style.display = "block";
+				card.style.display = "block";
+
+			}
+		}
+		function cz(){
+			var body = document.getElementsByTagName('body')[0];
+			var purple = document.getElementById("purple");
+			var d_cz = document.getElementById("d_cz");
+			console.log(purple)
+			
+			if (b_top.style.display == "none") {
+				d_cz.style.display = "block";
+				// body.style.opacity = "0.5";
+				// d_cz.style.opacity = "1";
+			}else{
+				d_cz.style.display = "none";
+				body.style.opacity = "1";
+
+			}
+		}
+		function close1(){
+
+			var d_cz = document.getElementById("d_cz");
+			d_cz.style.display = "none";
+		}
+		function bag(){
+			var d_bag = document.getElementById("d_bag");
+			if (b_top.style.display == "none") {
+				d_bag.style.display = "block";
+			}else{
+				d_bag.style.display = "none";
+
+			}
+
+		}
+		function close2(){
+			var d_bag = document.getElementById("d_bag");
+			d_bag.style.display = "none";
+		}
+	</script>
+</body>
+</html>
